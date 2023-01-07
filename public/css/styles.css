@@ -14,6 +14,13 @@ body{
     align-items: center;
 }
 
+.articulos .articulos_title-visita{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+
+
 header nav {
     font-size: 12px;
 }
@@ -75,6 +82,11 @@ header div.input{
     width: 300px;
 }
 
+.articulos .articulos_title-recommendations{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
 .recommendations{
     width:90vw;
     text-align: center;
@@ -83,8 +95,20 @@ header div.input{
 .item{
     margin-bottom: 10px;
     max-width:90vw;
+    transition: all 250ms ease-out;
 }
 
+.item:hover{
+   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+}
+
+.producto{
+    border:1px solid #ebebeb;
+    padding:15px;
+    background-color: white;
+    width:100%;
+    position: relative;
+}
 
 .camion{
     display:block;
@@ -98,14 +122,13 @@ header div.input{
     height: 30px;
     right: 20px;
     top:-15px;
+    transition: all 250ms ease-in-out;
 }
 
-.producto{
-    border:1px solid #ebebeb;
-    padding:15px;
-    background-color: white;
-    width:100%;
+.camion:hover{
+    transform: rotate(-90deg);
 }
+
 
 .valores{
     display:flex;
@@ -142,6 +165,25 @@ article{
     padding: 0;
 }
 
+.main-footer{
+    padding: 30px 10px;
+}
+
+
+.main-footer .main-footer_title{
+    margin: 10px 0px;
+    text-align: center;
+}
+
+
+.main-footer .main-footer_leyenda{
+    text-align: center;
+}
+
+.main-footer .main-footer_title-copyright{
+    margin-top: 20px;
+    color:#666;
+}
 
 @media(min-width: 768px){
     .main-header-top-bar{
@@ -179,11 +221,6 @@ article{
         width:40vw;
     }
 
-    .item{
-        width: 40vw;
-        display:flex;
-        flex-wrap:wrap;
-    }
 
     .articulos section{
         display:flex;
