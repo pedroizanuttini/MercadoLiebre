@@ -230,6 +230,10 @@ article{
         justify-content: space-between;
     }
 
+    .logo{
+        width: 250px;
+    }
+
     .copy-header{
         width: auto;
     }
@@ -271,6 +275,10 @@ article{
 
     .main-header-top-bar{
         align-items: center;
+    }
+
+    .logo{
+        width: 350px;
     }
 
     .main-navbar{
