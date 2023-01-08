@@ -14,6 +14,14 @@ body{
     align-items: center;
 }
 
+.articulos .articulos__banner{
+    width: 100%;
+}
+
+.articulos .articulos__banner img{
+    width: 100%;
+}
+
 .articulos .articulos_title-visita{
     margin-top: 20px;
     margin-bottom: 5px;
@@ -33,6 +41,15 @@ header nav {
 .copy-header{
     font-weight:400px;
     text-align: center;
+    width: 100%;
+}
+
+.main-header-top-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
 }
 
 .main-navbar{
@@ -66,20 +83,31 @@ header nav {
     border-radius: 5px;
     text-align:center;
     font-size: 17px;
-    margin: auto; 
+    margin: 15px auto; 
 }
 
 .logo{
-    width:100%;
-    display: flex;
-    justify-content: center;
+   width: 150px;
 }
 
-header div.input{
-    background-color: #FFF;
-    border: 1px solid #000;
-    color:darkgrey;
-    width: 300px;
+.search-container{
+    width: 45%;
+    max-width: 240px;
+    position: relative;
+}
+
+.search-container input{
+    width: 100%;
+    padding: 10px 30px 10px 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    position: relative;
+}
+.search-container i{
+    position: absolute;
+    right: 8px;
+    top: 8px;
 }
 
 .articulos .articulos_title-recommendations{
@@ -88,18 +116,29 @@ header div.input{
 }
 
 .recommendations{
-    width:90vw;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width:100%;
+    max-width: 1200px;
 }
 
 .item{
     margin-bottom: 10px;
-    max-width:90vw;
+    width: 250px;
     transition: all 250ms ease-out;
 }
 
 .item:hover{
    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); 
+}
+
+.item__image-container{
+    width: 100%;
+}
+
+.item__image-container img{
+    width: 100%;
 }
 
 .producto{
@@ -192,8 +231,7 @@ article{
     }
 
     .copy-header{
-        max-width:350px;
-        text-align: right;
+        width: auto;
     }
 
     .burguer-menu{
@@ -213,13 +251,7 @@ article{
         margin: 0px 5px;
     }
 
-    .logo{
-        width: 250px;
-    }
 
-    main section article picture img{
-        width:40vw;
-    }
 
 
     .articulos section{
@@ -252,15 +284,10 @@ article{
     .copy-header{
         margin:0px;
         max-width:350px;
-        text-align: right;
     }
 
     .main-navbar a{
         font-size:19px;
-    }
-
-    .logo{
-        width:250px;
     }
 
     .recommendations{
