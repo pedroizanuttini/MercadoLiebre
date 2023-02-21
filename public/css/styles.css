@@ -204,25 +204,112 @@ article{
     padding: 0;
 }
 
+footer{
+    padding-top: 50px;
+    text-align: center;
+    background-color: white;
+    margin-top: 80px;
+}
+
 .main-footer{
-    padding: 30px 10px;
-}
-
-
-.main-footer .main-footer_title{
-    margin: 10px 0px;
+    display:flex;
+    max-width: 1200px;
     text-align: center;
+    margin-top: 30px;
+    margin:auto;
+}
+
+.pagos_icon i{
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #1259c3;
+    padding: 2px 0px;
+}
+
+.envios_icon i{
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #1259c3;
+    padding: 2px 0px;
+}
+
+.seguridad_icon i{
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #1259c3;
+    padding: 2px 0px;
 }
 
 
-.main-footer .main-footer_leyenda{
-    text-align: center;
+.main-footer_pagos .main-footer_leyenda{
+
 }
 
-.main-footer .main-footer_title-copyright{
+.main-footer_title-copyright{
     margin-top: 20px;
     color:#666;
+    padding: 0px 0px 15px 10px;
+    text-align: left;
 }
+
+
+.main-footer-pagos{
+    margin-top: 20px;
+}
+
+.main-footer-envios{
+    margin-top: 20px;
+}
+
+.main-footer-seguridad{
+    margin-top:20px;
+}
+
+.footer-icon .i{
+
+}
+
+.main-footer_title{
+    letter-spacing: 2px;
+    text-align:center;
+    padding-top:3px;
+    padding-bottom: 3px;
+}
+
+@media(max-width: 768px){
+    
+    .main-footer{
+        flex-direction: column;
+    }
+
+    .main-footer_pagos{
+        padding-top: 40px;
+    }
+    
+    .main-footer_envios{
+        padding-top: 40px;
+    }
+    
+    .main-footer_seguridad{
+        padding-top:40px;
+    }
+
+    .main-footer_title-copyright{
+        margin-top: 30px;
+    }
+
+    footer{
+        padding-top: 20px;
+        
+    }
+    
+
+
+}
+
+
+
+
 
 @media(min-width: 768px){
     .main-header-top-bar{
@@ -263,6 +350,8 @@ article{
         justify-content: space-around;
         flex-wrap:wrap;
     }
+
+    
 
 
 }
