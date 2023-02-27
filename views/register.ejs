@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="../css/registration.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a289e801ed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <%- include('./partials/header'); -%>
+
+    <main>
+        <form class="form" action="" method="POST">
+            <section class="form-register">
+                <h2>Crea tu cuenta</h2>
+                <label class="rotulos" for="nombre">Nombre</label>
+                <input class="controls" type="text" name="fname" id="nombre" placeholder="Ingresa tu nombre" required>
+                
+                <label class="rotulos" for="nombre">Apellido</label>
+                <input class="controls" type="text" name="lname" id="nombre" placeholder="Ingresa tu apellido" required>
+
+                <label class="rotulos" for="avatar">Foto de perfil</label>
+                <input class="controls" type="file" name="avatar" id="avatar" required>
+
+                <label class="rotulos" for="email">Email</label>
+                <input class="controls" type="email" name="email" id="email" placeholder="Ingresa tu email">
+                <label class="rotulos" for="password">Contrasena</label>
+                <label><input class="check" type="checkbox" name="aceptar"> Acepto los<a href="#"> terminos y condiciones.</a><label>
+                <input class="botons" type="submit" value="Registrarme">
+            </section>
+        </form> 
+    </main>
+    
+    <%- include('./partials/footer'); -%>
+
+</body>
+</html>

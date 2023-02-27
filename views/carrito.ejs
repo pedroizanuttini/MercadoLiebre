@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Liebre</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="css/carrito.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a289e801ed.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <%- include('./partials/header'); -%>
+    
+    <main class="main">
+        <section class="cart">
+            <div class="cart-container">
+                <h2>Productos</h2>
+                <article class="cart-container__item">
+                    <div class="item__image">
+                        <img src="/images/img-cafetera-moulinex.jpg">
+                    </div>
+                    <div class="item__info">
+                        <h3 class="info__title">Cafetera Moulinex</h3>
+                        <p class="info__desc">50%</p>
+                        <p class="info__price">$6770.00</p>
+                        <div class="info_qty">
+                            <button class="qty__count">-</button>
+                            <div class="qty__value">1</div>
+                            <button class="qty__count">+</button>
+                        </div>
+                        <p class="info__total">Total: $6770.00</p>
+                    </div>
+                    <button class="item__icon-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </article>
+
+                <article class="cart-container__item">
+                    <div class="item__image">
+                        <img src="/images/img-macbook-pro-2019.jpg">
+                    </div>
+
+                    <div class="item__info">
+                        <h3 class="info__title">Mackbook Pro</h3>
+                        <p class="info__desc">20%</p>
+                        <p class="info__price">$6770.00</p>
+                        <div class="info_qty">
+                            <button class="qty__count">-</button>
+                            <div class="qty__value">1</div>
+                            <button class="qty__count">+</button>
+                        </div>
+                        <p class="info__total">Total: $6770.00</p>
+                    </div>
+                    <button class="item__icon-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </article>
+
+                <article class="cart-container__item">
+                    <div class="item__image">
+                        <img src="/images/img-samsung-galaxy-s10.jpg">
+                    </div>
+
+                    <div class="item__info">
+                        <h3 class="info__title">Samsung Galaxy S10</h3>
+                        <p class="info__desc">20%</p>
+                        <p class="info__price">$70500.00</p>
+                        <div class="info_qty">
+                            <button class="qty__count">-</button>
+                            <div class="qty__value">1</div>
+                            <button class="qty__count">+</button>
+                        </div>
+                        <p class="info__total">Total: $70500.00</p>
+                    </div>
+                    <button class="item__icon-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    
+    <%- include('./partials/footer'); -%>
+
+</body>
+</html>
