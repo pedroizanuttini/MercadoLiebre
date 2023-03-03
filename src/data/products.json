@@ -1,0 +1,28 @@
+[
+    {
+        "id":1,
+        "name":"Cafetera moulinex",
+        "description":"Lorem ipsum dolor",
+        "image":"/images/img-cafetera-moulinex.jpg",
+        "category":"Cafeteras",
+        "price":6770.0
+    },
+
+    {
+        "id":2,
+        "name":"Samsung Galaxy",
+        "description":"Lorem ipsum dolor",
+        "image":"/images/img-samsung-galaxy-s10.jpg",
+        "category":"Celulares",
+        "price":70500
+    },
+
+    {
+        "id":3,
+        "name":"macbook-pro",
+        "description":"Lorem ipsum dolor",
+        "image":"/images/img-macbook-pro-2019.jpg",
+        "category":"Computadoras",
+        "price":230000
+    }
+]

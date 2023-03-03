@@ -34,6 +34,10 @@ body{
     padding-bottom: 10px;
 }
 
+.form-group{
+    margin:10px;
+}
+
 .form-group .form-group__input{
     width:100%;
     height:40px;
@@ -59,3 +63,4 @@ body{
 .new-product__form .form-group{
     margin-top: 15px;
 }
+
