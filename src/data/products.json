@@ -14,7 +14,7 @@
         "description":"Lorem ipsum dolor",
         "image":"/images/img-samsung-galaxy-s10.jpg",
         "category":"Celulares",
-        "price":70500
+        "price":70500.0
     },
 
     {
@@ -23,6 +23,6 @@
         "description":"Lorem ipsum dolor",
         "image":"/images/img-macbook-pro-2019.jpg",
         "category":"Computadoras",
-        "price":230000
+        "price":230000.0
     }
 ]
