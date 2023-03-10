@@ -1,3 +1,11 @@
+:root{
+    --primary-color: #e49b0f;
+    --secondary-color: #1f53c5;
+    --just-white: #FFFFFF;
+    --just-black: #000000;
+    --gray-color: #9c9c9c;
+}
+
 *{
     box-sizing: border-box;
     margin:0;
@@ -62,5 +70,22 @@ body{
 
 .new-product__form .form-group{
     margin-top: 15px;
+}
+
+.button-primary{
+    border: 2px solid #EAC926;
+    background-color: #EAC926;
+    color: var(--just-black);
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 12px 30px;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    max-width: 400px;
+}
+
+.button-container{
+    padding: 15px 60px;
+    text-align: center;
 }
 

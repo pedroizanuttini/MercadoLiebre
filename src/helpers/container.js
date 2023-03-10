@@ -23,11 +23,41 @@ class Container{
         }
     }
 
-    async createProduct(){
+    async getProductById(id){
         try{
+            const products = await this.getAllProducts();
+            const result = products.find( prod => prod.id==id);
+            return result;
+        }catch(error){
 
-        }catch{error}{
+        }
+    }
 
+    async createProduct(newProduct){
+        try{
+            const products= await this.getAllProducts();
+            newProduct.id=products.length+1;
+            newProduct.price=parseInt(newProduct.price) //Parseo el numero a entero porque estaba como string.
+            products.push(newProduct);
+
+            await fs.promises.writeFile(this.filePath, JSON.stringify(products));
+            return newProduct;
+
+        }catch(error){
+            console.log(error);
+            return null;
+        }
+    }
+
+    async deleteProductById(id){
+        try {
+            const products = await this.getAllProducts();
+            const newArrayProducts = products.filter( prod => prod.id != id); // Filtro los elementos del array para que me devuelva los que tienen un Id distinto.
+            await fs.promises.writeFile(this.filePath, JSON.stringify(newArrayProducts));
+            return newArrayProducts;
+        } catch(error){
+            console.log(error);
+            return null;
         }
     }
 

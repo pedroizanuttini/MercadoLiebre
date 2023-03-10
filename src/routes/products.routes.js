@@ -12,7 +12,7 @@ router.post('/', createProduct) //http://localhost:3000/products
 
 router.get('/:id/edit', showProductsFormEdit) //http://localhost:3000/products/:id/edit
 router.put('/:id', updateProduct) //http://localhost:3000/products/:id
-router.delete(':id', deleteProduct) //http://localhost:3000/products/:id
+router.delete('/:id', deleteProduct) //http://localhost:3000/products/:id
 
  
 module.exports = router;
