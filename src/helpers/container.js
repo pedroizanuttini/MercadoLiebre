@@ -37,13 +37,36 @@ class Container{
         try{
             const products= await this.getAllProducts();
             newProduct.id=products.length+1;
-            newProduct.price=parseInt(newProduct.price) //Parseo el numero a entero porque estaba como string.
+            newProduct.price=parseInt(newProduct.price); //Parseo el numero a entero porque estaba como string.
             products.push(newProduct);
 
             await fs.promises.writeFile(this.filePath, JSON.stringify(products));
             return newProduct;
 
         }catch(error){
+            console.log(error);
+            return null;
+        }
+    }
+
+    async updateProduct(id,prodUpdate){
+        console.log('on controller')
+        try{
+            const products= await this.getAllProducts();
+            if(products.some( prod => prod.id==id)){
+                const newArrayProducts = products.map( prod=>{
+                    if(prod.id==id){
+                        prodUpdate.id = parseInt(id);
+                        return prodUpdate;
+                    }
+                    return prod;
+                })
+            await fs.promises.writeFile(this.filePath, JSON.stringify(newArrayProducts));
+            return newArrayProducts;    
+            }
+            return null // cuando no existe ningun producto con ese id
+
+        }catch (error) {
             console.log(error);
             return null;
         }

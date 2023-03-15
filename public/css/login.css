@@ -34,7 +34,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--bg-gray-color);
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 395px);
 }
 
 .iniciar-sesion{
@@ -125,7 +125,6 @@ footer{
     padding-top: 50px;
     text-align: center;
     background-color: white;
-    margin-top: 80px;
 }
 
 .main-footer{

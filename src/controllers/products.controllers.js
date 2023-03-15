@@ -4,9 +4,18 @@ const {Container} = require('../helpers/container');
 const container =new Container('products.json');
 
 const showProducts = async (req, res=response) =>{
-    const products= await container.getAllProducts();
+    const {id} =req.params;
+
+    const products= await container.getAllProducts(id);
     console.log(products);
-    res.render('./products/productlist', { products })
+    res.render('./products/productlist', { products });
+}
+
+const showProductDetail= async (req,res=response) => {
+    const {id} =req.params;
+
+    const product= await container.getProductById(id);
+    res.render('./products/productdetail', { product })
 }
 
 const showProductsFormEdit= async (req,res=response) => {
@@ -15,18 +24,17 @@ const showProductsFormEdit= async (req,res=response) => {
     if(id){ //para editar
         const product = await container.getProductById(id);  //si no existe el id devuelve undefined.
         console.log(product);
-        if(!product){
-            return res.redirect('/products');
+        
+        if(product){
+           return res.render('./products/productsform',{ product }); 
         }
-        res.render('./products/productsform',{ product }); 
+
+        return res.render('./products/productsform', { product:null}); 
     }else{ //para crear
-        res.render('./products/productsform', { product:null});
+        return    res.render('./products/productsform', { product:null});
     }
 }
 
-const showProductDetail= async(req,res)=> {
-    res.render('./products/productdetail', {})
-}
 
 
 
@@ -38,19 +46,26 @@ const createProduct= async(req, res)=> {
         console.log(products);
         return res.render('./products/productlist', { products });
     }else {
-        return res.render('/products/productsform', {products:null});
+        return res.render('./products/productlist', {products:null});
 
     }
 }
 
 
 
-
-
-
-
-const updateProduct= (req, res)=> {
-    return; 
+const updateProduct= async(req, res)=> {
+    const products=await container.getAllProducts();
+    
+    const { id } = req.params;
+    if(!id) return res.redirect('/products'); //este es el caso en que no ponga en la ruta el id.
+    
+    const result = await container.updateProduct(id, req.body);
+    
+    if(result){
+        return res.redirect('/products');
+    }else{
+        return res.render('./products/productsform', { product:null});
+    }
 }
 
 

@@ -24,7 +24,7 @@
         <section class="new-product">
             <h1 class="new-product_title">Agrega un producto nuevo</h1>
             <% if (product) { %>
-                    <form class="new-product__form" action="" method="PUT">
+                    <form class="new-product__form" action="http://localhost:3000/products/<%=product.id%>/edit" method="POST">
                         <div class="form-group">
                             <label for="name" class="etiquetas">Nombre de producto: </label>
                             <input value= <%=product.name%> id="name" name="name" class="form-group__input" type="text">
@@ -37,7 +37,7 @@
 
                         <div class="form-group">
                             <label for="image"> Imagen del producto: </label>
-                            <input value=<%=product.image%> id="image" name="image" class="form-group__file" type="file">
+                            <input value=<%=product.image%> id="image" name="image" class="form-group__file" type="text">
                         </div>
 
                         <div class="form-group">

@@ -213,33 +213,18 @@ footer{
 
 .main-footer{
     display:flex;
-    max-width: 1200px;
-    text-align: center;
-    margin-top: 30px;
-    margin:auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 30px auto;
 }
 
-.pagos_icon i{
+.pagos_icon i, .envios_icon i, .seguridad_icon i{
     font-size: 2em;
     margin-bottom: 5px;
     color: #1259c3;
     padding: 2px 0px;
 }
-
-.envios_icon i{
-    font-size: 2em;
-    margin-bottom: 5px;
-    color: #1259c3;
-    padding: 2px 0px;
-}
-
-.seguridad_icon i{
-    font-size: 2em;
-    margin-bottom: 5px;
-    color: #1259c3;
-    padding: 2px 0px;
-}
-
 
 
 .main-footer_title-copyright{
@@ -269,8 +254,6 @@ footer{
 .main-footer_title{
     letter-spacing: 2px;
     text-align:center;
-    padding-top:3px;
-    padding-bottom: 3px;
 }
 
 @media(max-width: 768px){
