@@ -24,11 +24,10 @@ class UserContainer{
 
     async createUser(newUser){
         try{
-            const users= await this.getAllUsers();
-            console.log('in create user: ', users)
-            newUser.id=users.length+1;
+            const users= await this.getAllUsers();         
+            newUser.id=users.length+1;              
             users.push(newUser);
-            await fs.promises.writeFile(this.filePath, JSON.stringify(users)); //escribo en el archivo Json
+            await fs.promises.writeFile(this.filePath, JSON.stringify(users));
             return newUser;
         }catch(error){
             console.log(error);

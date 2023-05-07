@@ -14,28 +14,23 @@
     <%- include('./partials/header'); -%>
 
     <main class="main">
-
-        <form class="login-form" method="POST" action="http://localhost:3000/auth/login">
-
-            <h2 class="iniciar-sesion">Ingresa tu email</h2>
-
-            <div class="login-form__control">
-                <input type="text" required name="username" id="username">
-                <i class=""></i>
-            </div>
-
-            <div class="login-form__control">
-                <input type="password" required name="password" id="password">
-                <i class=""></i>
-            </div>
-
-            <div class="botones">
-                <button type="submit">
-                    <a href="/">Enviar</a>
-                </button>
-            </div>
-
-        </form>
+        <section class="section-login">
+            <form class="login-form" method="POST" action="http://localhost:3000/auth/login">
+                <div>
+                    <h2 class="login-form_title">Inicia sesion en Mercado Liebre</h2>
+                </div>
+                <div class="form-login_div">
+                    <input class="div_controls" value="<% user ? user.email:''%>" type="email" id="email" placeholder="Ingrese su email" name="email" required>
+                </div>
+                <div class="form-login_div">
+                    <input class="div_controls" value="<% user ? user.password: ''%>" type="password" name="password" id="password" placeholder="Ingrese su contraseña" required>
+                </div>
+                <div class="form-login_boton">
+                    <input class="boton_submit" type="submit" value="ingresar">
+                </div>
+                
+            </form>    
+        </section>
 
     </main>
 

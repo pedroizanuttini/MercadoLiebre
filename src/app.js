@@ -1,5 +1,9 @@
 const express = require('express'); //importo express y traerme la libreria.
 const path=require('path');
+const cookieParser = require('cookie-parser');
+const db=require('./data/config');
+const { Sequelize } = require('sequelize');
+const Role=require('./models/roles.models')
 
 class App{
     app;
@@ -15,11 +19,36 @@ class App{
         this.app = express();
         this.port = 3000;
 
+        // conexion con base de datos.
+        // this.connectDDBB();
+
         //ejecucion de middlewares
         this.middlewares();
         this.routes();
         this.views();
     }
+
+    // async connectDDBB(){
+    //     try{
+    //         await db.authenticate();
+    //         await db.sync({ force:false }).then(()=>{
+                // console.log('Roles table created successfully');
+                // const roles= ['ADMIN_ROLE','USER_ROLE'];
+                // roles.forEach((role)=>{
+                //     Role.create({name:role})
+                // const categories=['','',''];
+                // });
+
+            
+            
+//         }).catch((error)=> {
+//             console.error('Unable to create table', error);
+//         })
+//         console.log('Connection has been established successfully.');
+//     }   catch (error){
+//         console.error('unable to connect to the database:', error);
+//     }
+// }
 
     middlewares(){
         // Esto es para la lectura del body.
@@ -27,6 +56,9 @@ class App{
 
         //parseo del body JSON ---> javascript.
         this.app.use(express.urlencoded({extended: true}));
+
+        // parseo de las cookies
+        this.app.use(cookieParser());
 
         //directorio publico
         this.app.use(express.static('public'));

@@ -24,7 +24,7 @@
         <section class="new-product">
             <h1 class="new-product_title">Agrega un producto nuevo</h1>
             <% if (product) { %>
-                    <form class="new-product__form" action="http://localhost:3000/products/<%=product.id%>/edit" method="POST">
+                    <form class="new-product__form" action="http://localhost:3000/products/<%=product.id%>/edit" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name" class="etiquetas">Nombre de producto: </label>
                             <input value= <%=product.name%> id="name" name="name" class="form-group__input" type="text">
@@ -37,7 +37,7 @@
 
                         <div class="form-group">
                             <label for="image"> Imagen del producto: </label>
-                            <input value=<%=product.image%> id="image" name="image" class="form-group__file" type="text">
+                            <input value=<%=product.image%> id="image" name="image" id="image" class="form-group__file" type="file">
                         </div>
 
                         <div class="form-group">
@@ -49,13 +49,17 @@
                             <label for="price"> Precio:  </label>
                             <input value=<%=product.price%> id="price" name="price" class="form-group__input" type="number">
                         </div>
+                        <div class="form-group">
+                            <label for="stock">Stock: </label>
+                            <input id="stock" name="stock" class="form-group__input" type="number">
+                        </div>
                         <div class="button-container">
                             <button class="button-primary" type="submit">Agregar producto</button>
                         </div>
 
                     </form>
             <% } else { %>
-                <form class="new-product__form" action="http://localhost:3000/products" method="POST">
+                <form class="new-product__form" action="http://localhost:3000/products" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name" class="etiquetas">Nombre de producto: </label>
                         <input id="name" name="name" class="form-group__input" type="text">
@@ -68,7 +72,7 @@
 
                     <div class="form-group">
                         <label for="image"> Imagen del producto: </label>
-                        <input id="image" name="image" class="form-group__file" type="text">
+                        <input id="image" name="image" id="image" class="form-group__file" type="file">
                     </div>
 
                     <div class="form-group">
@@ -80,6 +84,12 @@
                         <label for="price"> Precio:  </label>
                         <input id="price" name="price" class="form-group__input" type="number">
                     </div>
+                    
+                    <div class="form-group">
+                        <label for="stock">Stock: </label>
+                        <input id="stock" name="stock" class="form-group__input" type="number">
+                    </div>
+
                     <div class="button-container">
                         <button class="button-primary" type="submit">Agregar producto</button>
                     </div>

@@ -1,14 +1,24 @@
 const {response} = require('express');
 const {Container} = require('../helpers/container');
+const Product = require('../models/product.models');
 
 const container =new Container('products.json');
 
 const showProducts = async (req, res=response) =>{
-    const {id} =req.params;
+    // const {id} =req.params;
 
-    const products= await container.getAllProducts(id);
-    console.log(products);
-    res.render('./products/productlist', { products });
+    // const products= await container.getAllProducts(id);
+    // console.log(products);
+    // res.render('./products/productlist', { products });
+    try{
+        const products=findAll(Product);
+        res.render("./products/productdetail",{products}); 
+    }catch(error){
+        return res.status(500).json({
+            error:'Internal server error'
+        })
+    }
+    
 }
 
 const showProductDetail= async (req,res=response) => {
@@ -38,17 +48,21 @@ const showProductsFormEdit= async (req,res=response) => {
 
 
 
-const createProduct= async(req, res)=> {
-    const result=await container.createProduct(req.body);
-    const products=await container.getAllProducts();
+const createProduct= async(req, res=response)=> {
     
-    if(result){
-        console.log(products);
-        return res.render('./products/productlist', { products });
-    }else {
-        return res.render('./products/productlist', {products:null});
+    console.log(req.file,req.body);
+    const product={...req.body,avatar:`${req.file.destination}/${req.file.filename}.png`};
+    
+    // const result=await container.createProduct(req.body);
+    // const products=await container.getAllProducts();
+    
+    // if(result){
+    //     console.log(products);
+    //     return res.render('./products/productlist', { products });
+    // }else {
+    //     return res.render('./products/productlist', {products:null});
 
-    }
+    // }
 }
 
 

@@ -16,22 +16,81 @@
     <main>
         <form class="form" action="http://localhost:3000/auth/new" method="POST" enctype="multipart/form-data">
             <section class="form-register">
-                <h2>Crea tu cuenta</h2>
-                <label class="rotulos" for="nombre">Nombre</label>
-                <input class="controls" type="text" name="fname" id="nombre" placeholder="Ingresa tu nombre" required>
-                
-                <label class="rotulos" for="nombre">Apellido</label>
-                <input class="controls" type="text" name="lname" id="nombre" placeholder="Ingresa tu apellido" required>
+                <h2 class="form_titulo-crear">Crea tu cuenta de Mercado Liebre</h2>
+                <div>
+                    <div class="form-register_div">
+                        <input class="controls" type="text" name="fname" id="nombre" placeholder="Ingresa tu nombre" required>
+                    </div>
+                    <div class="form-register_div">
+                        <input class="controls" type="email" name="email" id="email" placeholder="Ingresa tu email">
+                    </div>
+                    <div class="form-register_div">
+                        <input class="controls" type="password" name="password" id="password" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-register_div">
+                        <input class="controls" type="password" name="password" id="password" placeholder="Confirmar contraseña" required>
+                    </div class="form-register_div">
+                    <input style="display:none" type="text" name="role" value="USER_ROLE">
+                    <div>
+                </div>
+                <h4 class="form-title">Fecha de nacimiento</h4>
+                    <div class="form-register_div">
+                        <input class="controls" type="date" name="fecha-nacimiento" id="fecha-nacimiento" placeholder="Contraseña" required>
+                    </div>
+                    <div class="form-register_div">
+                        <input class="controls" type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required>
+                    </div>
+                </div>
+                <div>
+                    <div class="form-perfil">
+                        <div>
+                            <h4 class="form-title">Perfil del usuario</h4>
+                        </div>
+                        <div class="form-register_div-perfil">
+                            <input type="radio" for="perfil-usuario" id="perfil-usuario" value="Comprador"></input>
+                            <label for="perfil-usuario">Comprador</label>
+                            <input type="radio" for="perfil-usuario" id="perfil-usuario" value="Vendedor"></input>
+                            <label for="perfil-usuario">Vendedor</label>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-intereses">
+                            <h4>Intereses del usuario</h4>
+                        </div>
+                        <div class="form-register_div">
+                            <input type="checkbox" name="intereses-usuario" id="perfil-usuario" value="Electro"></input>
+                            <label for="intereses-usuario">Electro</label>
+                        </div>
+                        <div class="form-register_div">
+                            <input type="checkbox" name="intereses-usuario" id="perfil-usuario" value="Moda"></input>
+                            <label for="intereses-usuario">Moda</label>
+                        </div>
+                        <div class="form-register_div">
+                            <input type="checkbox" name="intereses-usuario" id="perfil-usuario" value="Hogar"></input>
+                            <label for="intereses-usuario">Hogar</label>
+                        </div>
+                        <div class="form-register_div">
+                            <input type="checkbox" name="intereses-usuario" id="perfil-usuario" value="Jugueteria"></input>
+                            <label for="intereses-usuario">Jugueteria</label>
+                        </div>
+                        <div class="form-register_div">
+                            <input type="checkbox" name="intereses-usuario" id="perfil-usuario" value="Vida Sana"></input>
+                            <label for="intereses-usuario">Vida Sana</label>
+                        </div>
 
-                <label class="rotulos" for="avatar">Foto de perfil</label>
-                <input class="controls" type="file" name="avatar" id="avatar" required>
+                        <div class="form-register_avatar">
+                            <label for="foto-de-perfil">Foto de perfil</label>
+                            <input type="file" name="avatar" id="avatar" value=""></input>
+                        </div>                
+                    </div>
+                </div>
+                <div class="botons">
+                    <input class="botons_form" type="submit" value="Enviar">
+                    <input class="botons_form" type="reset" value="Resetear">
+                </div>
 
-                <label class="rotulos" for="email">Email</label>
-                <input class="controls" type="email" name="email" id="email" placeholder="Ingresa tu email">
-                <label class="rotulos" for="password">Contrasena</label>
-                <input class="controls" type="password" name="password" id="password" placeholder="escribre tu contrsana" required>
-                <label><input class="check" type="checkbox" name="aceptar"> Acepto los<a href="#"> terminos y condiciones.</a><label>
-                <input class="botons" type="submit" value="Registrarme">
+
+
             </section>
         </form> 
     </main>

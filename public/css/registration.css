@@ -89,7 +89,30 @@ header nav {
     background:white;
     padding:30px;
     margin:30px auto 60px auto;
+    box-shadow: 1px 2px 10px black;
     border-radius: left;
+}
+
+.form-register_div{
+    padding:5px;
+    width: 100%;
+}
+
+.form-register_avatar{
+    padding:10px;
+}
+
+.form-perfil{
+    padding:10px;
+}
+
+.form-intereses{
+    padding:10px;
+}
+
+.form_titulo-crear{
+    width:100%;
+    text-align: center;
 }
 
 .form-register h2{
@@ -116,13 +139,13 @@ header nav {
 
 
 .controls{
-    width:100%;
-    background: #9c9c9c;
-    padding:10px;
+    width:90%;
+    background: white;
+    padding:5px;
     border-radius:1px;
     margin-bottom:16px;
     border:1px,solid, #1f53c5;
-    font-size:18px;
+
 }
 
 .form-register a:hover{
@@ -130,13 +153,27 @@ header nav {
     cursor:pointer;
 }
 
-.form-register .botons{
-    width:100%;
+.botons{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-register_div-perfil{
+    padding-top:10px;
+}
+
+.form-register{
+    border-radius: 10px;
+}
+
+.botons .botons_form{
+    width:50%;
     background: #1f53c5;
-    padding:12px;
+    padding:5px;
     color:#ffffff;
-    margin:16px 0px;
-    font-size: 16px;
+    border-radius: 20px;
+    margin:10px;
 }
 
 footer{
@@ -260,6 +297,12 @@ footer{
 .main-navbar li{
     margin: 0px 5px;
 }
+
+.form-register{
+    min-width: 50%;
+}
+
+
 
 }
 

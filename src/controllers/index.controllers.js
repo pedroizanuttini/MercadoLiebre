@@ -1,7 +1,8 @@
 const {response} = require('express');
 
 const showHome = (req,res) => {
-    res.render('home', {})
+    console.log(`Se ejecuta controlador`)
+    return res.render('home', {})
 }
 
 module.exports = {
